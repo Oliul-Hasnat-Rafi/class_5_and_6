@@ -15,9 +15,10 @@ class home extends StatelessWidget {
         backgroundColor: Colors.green.shade600,
         child: Column(
           children: [
+            
             DrawerHeader(
               child: Card(
-                color: Colors.white,
+                color: Colors.white30,
                 child: Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: Column(
