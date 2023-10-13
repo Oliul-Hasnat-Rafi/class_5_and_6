@@ -11,235 +11,255 @@ class home extends StatelessWidget {
         title: Text("Class 5 & 6"),
         centerTitle: true,
       ),
-      drawer: Drawer(
-        backgroundColor: Colors.green.shade600,
-        child: Column(
-          children: [
-            
-            DrawerHeader(
-              child: Card(
-                color: Colors.white30,
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "YOU ARE NOT LOGGED IN!",
-                        style: GoogleFonts.arima(color: Colors.green),
-                      ),
-                      Text(
-                        "Login now to access all the features.",
-                        style: GoogleFonts.arima(
-                            color: Colors.green, fontSize: 20),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ElevatedButton.icon(
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.green)),
-                              onPressed: () {},
-                              icon: Icon(Icons.login_rounded),
-                              label: Text("SIGN NI")),
-                          ElevatedButton.icon(
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.green)),
-                              onPressed: () {},
-                              icon: Icon(Icons.logout_rounded),
-                              label: Text("SIGN UP"))
-                        ],
-                      ),
-                    ],
+      drawer: SafeArea(
+        child: Drawer(
+          backgroundColor: Colors.green.shade600,
+          child: Column(
+            children: [
+              Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.arrow_back_rounded,
+                      color: Colors.white,
+                      size: 30,
+                    ),
+                  )),
+              DrawerHeader(
+                child: Card(
+                  color: Colors.white,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "YOU ARE NOT LOGGED IN!",
+                          style: GoogleFonts.ubuntu(
+                              color: Colors.green.shade700, fontSize: 15),
+                        ),
+                        Text(
+                          "Login now to access all the features.",
+                          style: GoogleFonts.ubuntu(
+                              color: Colors.green.shade700, fontSize: 22),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ElevatedButton.icon(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Colors.green)),
+                                onPressed: () {},
+                                icon: Icon(Icons.login_rounded),
+                                label: Text("SIGN NI")),
+                            ElevatedButton.icon(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Colors.green)),
+                                onPressed: () {},
+                                icon: Icon(Icons.logout_rounded),
+                                label: Text("SIGN UP"))
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.home,
-                      color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "HOME",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.newspaper,
-                      color: Colors.white,
+                    SizedBox(
+                      width: 20,
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "NEWS",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
+                    Text(
+                      "HOME",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.person,
-                      color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.newspaper,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "PERSON",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.settings,
-                      color: Colors.white,
+                    SizedBox(
+                      width: 20,
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "SETTINGS",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
+                    Text(
+                      "NEWS",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.fact_check_outlined,
-                      color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Candidate",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.poll,
-                      color: Colors.white,
+                    SizedBox(
+                      width: 20,
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Polls",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
+                    Text(
+                      "PERSON",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 40,
-                    width: 40,
-                    child: Icon(
-                      Icons.event,
-                      color: Colors.white,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.settings,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.blue.shade900,
-                        borderRadius: BorderRadius.circular(80)),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Events",
-                    style: GoogleFonts.arima(color: Colors.white, fontSize: 15),
-                  )
-                ],
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "SETTINGS",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.fact_check_outlined,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Candidate",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.poll,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Polls",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 40,
+                      width: 40,
+                      child: Icon(
+                        Icons.event,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.blue.shade900,
+                          borderRadius: BorderRadius.circular(80)),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Events",
+                      style:
+                          GoogleFonts.arima(color: Colors.white, fontSize: 15),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       body: Container(
@@ -269,7 +289,7 @@ class home extends StatelessWidget {
                     ),
                     Container(
                       height: 176,
-                      width: 380,
+                      width: 260,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -386,7 +406,7 @@ class home extends StatelessWidget {
                     ),
                     Container(
                       height: 176,
-                      width: 380,
+                      width: 260,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
